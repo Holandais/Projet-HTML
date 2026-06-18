@@ -18,9 +18,9 @@ Ce projet est une page HTML/CSS simple qui présente :
 
 ## Ouvrir le site
 
-Ouvre `index.html` dans un navigateur web pour voir le site localement.
+Ouvre `index.html` dans un navigateur web pour voir le site
 
 ## Validation
 
-Le code HTML peut être validé sur le [validateur W3C](https://validator.w3.org/).
+Le code HTML peut a été validé sur le [validateur W3C](https://validator.w3.org/).
 
