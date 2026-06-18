@@ -24,6 +24,3 @@ Ouvre `index.html` dans un navigateur web pour voir le site localement.
 
 Le code HTML peut être validé sur le [validateur W3C](https://validator.w3.org/).
 
-## Publication
-
-Ce projet peut être publié avec GitHub Pages en utilisant la branche `main`.
