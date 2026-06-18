@@ -1,4 +1,4 @@
-# Portfolio Web & SIG — Holandais MBEMBA
+# Portfolio web — HOLANDAIS 
 
 Page personnelle présentant mon profil d’étudiant en géomatique et développeur web en formation.
 
