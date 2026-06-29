@@ -1,4 +1,4 @@
-﻿html {
+html {
   scroll-behavior: smooth;
 }
 
@@ -298,61 +298,4 @@ a:hover {
 .contact-link img {
   width: 32px;
   height: 32px;
-  display: block;
-}
-
-footer {
-  text-align: center;
-  color: #475569;
-  margin-top: 32px;
-  padding: 12px 0;
-  font-size: 0.95rem;
-}
-
-@media (max-width: 680px) {
-  body {
-    padding: 140px 16px 22px;
-  }
-
-  header {
-    padding: 20px 18px;
-  }
-
-  .hero {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .hero-photo img {
-    width: 100%;
-    max-width: 260px;
-  }
-
-  .cards-row,
-  .info-grid {
-    flex-direction: column;
-  }
-
-  nav {
-    gap: 8px;
-  }
-
-  h1 {
-    font-size: 1.95rem;
-  }
-
-  h2 {
-    margin: 32px auto 14px;
-    font-size: 1.45rem;
-  }
-
-  .contact-link {
-    width: 50px;
-    height: 50px;
-  }
-
-  .contact-link img {
-    width: 28px;
-    height: 28px;
-  }
 }
