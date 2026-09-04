@@ -1,26 +1,56 @@
-# Portfolio web — HOLANDAIS 
+# Portfolio professionnel — HOLANDAIS
 
-Page personnelle présentant mon profil d’étudiant en géomatique et développeur web en formation.
+Portfolio personnel et moderne présentant mon profil en géomatique, développement web et apprentissage continu.
 
 ## Description
 
-Ce projet est une page HTML/CSS simple qui présente :
-- mes compétences en SIG, modélisation, bases de données et programmation Python
-- ma formation à l’Université Denis Sassou N'Guesso et chez Akeni Academy
-- mes projets et hobbies
-- mes contacts professionnels
+Ce projet est un site vitrine single-page conçu pour présenter :
+- mon parcours et mes compétences
+- mes projets et expériences
+- mes certifications Akieni
+- mon profil professionnel en cartographie, données et web
+- mes canaux de contact
 
-## Fichiers
+## Fonctionnalités
 
-- `index.html` : structure du site
-- `style.css` : styles et présentation
-- `Images/` : icônes et logos utilisés par le site
+- design premium avec palette moderne et effets visuels
+- section portfolio plus élégante
+- slider de projets
+- effet de parallaxe
+- section certifications avec filtres par catégorie
+- cartes PDF premium et téléchargement direct
+- bouton WhatsApp flottant
+- thème clair / sombre
+- menu mobile
+- animations au scroll
+
+## Structure du projet
+
+- `index.html` : structure principale du site
+- `style.css` : styles visuels et responsive design
+- `script.js` : interactions et animations JavaScript
+- `Images/` : logos, icônes et visuels du portfolio
+- `certifications/` : fichiers PDF des formations et certifications
 
 ## Ouvrir le site
 
-Ouvre `index.html` dans un navigateur web pour voir le site
+Pour un bon fonctionnement des téléchargements PDF, il est recommandé d’ouvrir le site via un serveur local :
 
-## Validation
+```bash
+python -m http.server 8000
+```
 
-Le code HTML peut a été validé sur le [validateur W3C](https://validator.w3.org/).
+Puis ouvrir :
+
+```text
+http://localhost:8000/index.html
+```
+
+## Dépôt GitHub
+
+https://github.com/Holandais/Projet-HTML
+
+## Remarques
+
+Le site est entièrement statique et conçu en HTML/CSS/JavaScript vanilla, sans framework ni dépendance externe.
 
