@@ -8,11 +8,18 @@
   </head>
   <body>
 
-    <nav>
-      <a href="#apropos">À propos</a>
-      <a href="#skills">Compétences</a>
-      <a href="#projets">Projets</a>
-      <a href="#contact">Contact</a>
+    <nav class="main-nav">
+      <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false">
+        ☰
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="#apropos">À propos</a>
+        <a href="#skills">Compétences</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#projets">Projets</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Changer le thème">🌙</button>
     </nav>
 
     <header>
@@ -26,14 +33,49 @@
       </div>
     </header>
 
+    <section class="parallax-band">
+      <div class="parallax-content">
+        <p>Portfolio</p>
+        <h2>Des idées cartographiques, web et créatives en évolution.</h2>
+      </div>
+    </section>
+
     <main>
-      <section id="apropos" class="card-section">
-        <h2>À propos de moi</h2>
-        <p>
-          J'habite à Brazzaville, j'étudie à l'université Denis Sassou N'Guesso (Licence)
-          et je suis en pleine formation chez Akieni Academy. Je progresse en Web fullstack
-          et j'aime apprendre de nouveaux outils techniques.
-        </p>
+      <section id="apropos" class="card-section about-section">
+        <div class="about-layout">
+          <div class="about-text">
+            <p class="eyebrow dark">À propos</p>
+            <h2>Je crée des projets utiles, lisibles et inspirants.</h2>
+            <p>
+              J'habite à Brazzaville, j'étudie à l'université Denis Sassou N'Guesso (Licence)
+              et je suis en pleine formation chez Akieni Academy. Je progresse en Web fullstack
+              et j'aime apprendre de nouveaux outils techniques.
+            </p>
+            <div class="stats-grid">
+              <div class="stat-box">
+                <strong>+2</strong>
+                <span>années d'apprentissage</span>
+              </div>
+              <div class="stat-box">
+                <strong>8+</strong>
+                <span>outils maîtrisés</span>
+              </div>
+              <div class="stat-box">
+                <strong>100%</strong>
+                <span>curiosité & envie d'apprendre</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="profile-card">
+            <img src="Images/WhatsApp Image 2026-09-04 at 4.10.53 AM.jpeg" alt="Portrait de Holandais" />
+            <div class="profile-meta">
+              <span>Étudiant</span>
+              <strong>Holandais MBEMBA</strong>
+            </div>
+          </div>
+        </div>
+
         <div class="info-grid">
           <div class="info-card">
             <strong>Résidence</strong>
@@ -83,6 +125,36 @@
         </div>
       </section>
 
+      <section id="portfolio" class="portfolio-section card-section">
+        <div class="section-heading-row">
+          <div>
+            <p class="eyebrow dark">Portfolio</p>
+            <h2>Mes réalisations</h2>
+          </div>
+          <a href="#projets" class="view-link">Voir les projets</a>
+        </div>
+
+        <div class="portfolio-grid">
+          <article class="portfolio-card feature-card">
+            <span class="tag">SIG</span>
+            <h3>Cartographie urbaine</h3>
+            <p>Analyse et visualisation de données spatiales pour des préoccupations liées à l’aménagement et à la sécurité.</p>
+          </article>
+
+          <article class="portfolio-card accent-card">
+            <span class="tag">Web</span>
+            <h3>Apprentissage du développement</h3>
+            <p>Création de pages et d’interfaces pour renforcer mes compétences front-end et UX.</p>
+          </article>
+
+          <article class="portfolio-card">
+            <span class="tag">Data</span>
+            <h3>Traitement de données</h3>
+            <p>Utilisation de Python et des outils GIS pour nettoyer, analyser et représenter l’information.</p>
+          </article>
+        </div>
+      </section>
+
       <section id="skills" class="card-section">
         <h2>Compétences</h2>
         <div class="cards-row">
@@ -115,7 +187,7 @@
               <li><img class="icon" src="Images/pandas-python.png" alt="Pandas icon">Pandas</li>
               <li><img class="icon" src="Images/shapely.jpg" alt="Shapely icon">Shapely</li>
               <li><img class="icon" src="Images/pyproj.png" alt="PyProj icon">PyProj</li>
-              <li><img class="icon" src="Images/geopandas.png" alt="GeoPandas icon">GeoPandas</li>
+              <li><img class="icon" src="Images/géopandas.png" alt="GeoPandas icon">GeoPandas</li>
               <li><img class="icon" src="Images/pyqgis.jpg" alt="PyQGIS icon">PyQGIS</li>
             </ul>
           </div>
@@ -124,28 +196,268 @@
             <ul>
               <li><img class="icon" src="Images/word.jpg" alt="Word icon">Word</li>
               <li><img class="icon" src="Images/powerpoint.jpg" alt="PowerPoint icon">PowerPoint</li>
-              <li><img class="icon" src="Images/excel.jpg" alt="Excel icon">Excel</li>
+              <li><img class="icon" src="Images/exel.jpg" alt="Excel icon">Excel</li>
               <li><img class="icon" src="Images/visio.png" alt="Visio icon">Visio</li>
             </ul>
           </div>
         </div>
       </section>
 
-      <section id="projets" class="card-section">
+      <section id="certifications" class="card-section certifications-section">
+        <div class="section-heading-row">
+          <div>
+            <p class="eyebrow">Formation</p>
+            <h2>CERTIFATIONS</h2>
+          </div>
+
+          <div class="certification-filters" aria-label="Filtrer les certifications">
+            <button class="filter-btn active" type="button" data-filter="all" aria-pressed="true">Tout</button>
+            <button class="filter-btn" type="button" data-filter="sql" aria-pressed="false">SQL</button>
+            <button class="filter-btn" type="button" data-filter="javascript" aria-pressed="false">JavaScript</button>
+            <button class="filter-btn" type="button" data-filter="web" aria-pressed="false">Web</button>
+            <button class="filter-btn" type="button" data-filter="it" aria-pressed="false">IT</button>
+            <button class="filter-btn" type="button" data-filter="ai" aria-pressed="false">IA</button>
+          </div>
+        </div>
+
+        <div class="certifications-carousel" aria-live="polite">
+          <button class="certification-arrow prev" type="button" aria-label="Certification précédente">‹</button>
+
+          <div class="certifications-track">
+            <div class="certification-slide active">
+              <article class="certificate-card" data-category="sql">
+                <div class="card-top">
+                  <span class="badge badge-sql">SQL</span>
+                  <span class="date">2026</span>
+                </div>
+                <div class="pdf-preview"><span class="pdf-icon">PDF</span></div>
+                <h3>Introduction to SQL Bootcamp</h3>
+                <p>Session 3 Replay</p>
+                <a href="certifications/Introduction to SQL Bootcamp_ Session 3 Replay.pdf" download rel="noopener noreferrer">Télécharger le PDF</a>
+              </article>
+
+              <article class="certificate-card" data-category="sql">
+                <div class="card-top">
+                  <span class="badge badge-sql">SQL</span>
+                  <span class="date">2026</span>
+                </div>
+                <div class="pdf-preview"><span class="pdf-icon">PDF</span></div>
+                <h3>SQL Programming with MariaDB</h3>
+                <p>Analyzing Relational Data</p>
+                <a href="certifications/SQL Programming with MariaDB_ Analyzing Relational Data.pdf" download rel="noopener noreferrer">Télécharger le PDF</a>
+              </article>
+
+              <article class="certificate-card" data-category="sql">
+                <div class="card-top">
+                  <span class="badge badge-sql">SQL</span>
+                  <span class="date">2026</span>
+                </div>
+                <div class="pdf-preview"><span class="pdf-icon">PDF</span></div>
+                <h3>Database Fundamentals</h3>
+                <p>Working with SQL Commands</p>
+                <a href="certifications/Database Fundamentals_ Working with SQL Commands.pdf" download rel="noopener noreferrer">Télécharger le PDF</a>
+              </article>
+            </div>
+
+            <div class="certification-slide">
+              <article class="certificate-card" data-category="javascript">
+                <div class="card-top">
+                  <span class="badge badge-js">JS</span>
+                  <span class="date">2026</span>
+                </div>
+                <div class="pdf-preview"><span class="pdf-icon">PDF</span></div>
+                <h3>JavaScript - Functions & Arrays</h3>
+                <p>Décision making & data</p>
+                <a href="certifications/JavaScript_ Functions & Arrays in JavaScript.pdf" download rel="noopener noreferrer">Télécharger le PDF</a>
+              </article>
+
+              <article class="certificate-card" data-category="javascript">
+                <div class="card-top">
+                  <span class="badge badge-js">JS</span>
+                  <span class="date">2026</span>
+                </div>
+                <div class="pdf-preview"><span class="pdf-icon">PDF</span></div>
+                <h3>JavaScript - Objects</h3>
+                <p>Concepts fondamentaux</p>
+                <a href="certifications/JavaScript_ Objects.pdf" download rel="noopener noreferrer">Télécharger le PDF</a>
+              </article>
+
+              <article class="certificate-card" data-category="javascript">
+                <div class="card-top">
+                  <span class="badge badge-js">JS</span>
+                  <span class="date">2026</span>
+                </div>
+                <div class="pdf-preview"><span class="pdf-icon">PDF</span></div>
+                <h3>Form Validation & Async</h3>
+                <p>JavaScript avancé</p>
+                <a href="certifications/JavaScript_ Form Validation & Async Programming.pdf" target="_blank" rel="noreferrer">Ouvrir le PDF</a>
+              </article>
+            </div>
+
+            <div class="certification-slide">
+              <article class="certificate-card" data-category="web">
+                <div class="card-top">
+                  <span class="badge badge-web">Web</span>
+                  <span class="date">2026</span>
+                </div>
+                <div class="pdf-preview"><span class="pdf-icon">PDF</span></div>
+                <h3>Web Fundamentals - HTML</h3>
+                <p>Web Development with HTML</p>
+                <a href="certifications/Web Fundamentals_ Web Development with HTML.pdf" target="_blank" rel="noreferrer">Ouvrir le PDF</a>
+              </article>
+
+              <article class="certificate-card" data-category="web">
+                <div class="card-top">
+                  <span class="badge badge-web">Web</span>
+                  <span class="date">2026</span>
+                </div>
+                <div class="pdf-preview"><span class="pdf-icon">PDF</span></div>
+                <h3>Web Fundamentals - CSS</h3>
+                <p>Cascading Style Sheets</p>
+                <a href="certifications/Web Fundamentals_ Cascading Style Sheets for Web Pages.pdf" target="_blank" rel="noreferrer">Ouvrir le PDF</a>
+              </article>
+
+              <article class="certificate-card" data-category="git">
+                <div class="card-top">
+                  <span class="badge badge-git">Git</span>
+                  <span class="date">2026</span>
+                </div>
+                <div class="pdf-preview"><span class="pdf-icon">PDF</span></div>
+                <h3>Introduction to Git</h3>
+                <p>Contrôle de version</p>
+                <a href="certifications/Introduction to Git.pdf" target="_blank" rel="noreferrer">Ouvrir le PDF</a>
+              </article>
+            </div>
+
+            <div class="certification-slide">
+              <article class="certificate-card" data-category="it">
+                <div class="card-top">
+                  <span class="badge badge-it">IT</span>
+                  <span class="date">2026</span>
+                </div>
+                <div class="pdf-preview"><span class="pdf-icon">PDF</span></div>
+                <h3>CompTIA IT Fundamentals</h3>
+                <p>Operating Systems</p>
+                <a href="certifications/CompTIA IT Fundamentals_ Operating Systems.pdf" target="_blank" rel="noreferrer">Ouvrir le PDF</a>
+              </article>
+
+              <article class="certificate-card" data-category="it">
+                <div class="card-top">
+                  <span class="badge badge-it">IT</span>
+                  <span class="date">2026</span>
+                </div>
+                <div class="pdf-preview"><span class="pdf-icon">PDF</span></div>
+                <h3>CompTIA A+ Core 2</h3>
+                <p>Windows OS Fundamentals</p>
+                <a href="certifications/CompTIA A+ Core 2_ Windows OS Fundamentals & Editions.pdf" target="_blank" rel="noreferrer">Ouvrir le PDF</a>
+              </article>
+
+              <article class="certificate-card" data-category="ai">
+                <div class="card-top">
+                  <span class="badge badge-ai">IA</span>
+                  <span class="date">2026</span>
+                </div>
+                <div class="pdf-preview"><span class="pdf-icon">PDF</span></div>
+                <h3>Machine Learning</h3>
+                <p>Risk Management</p>
+                <a href="certifications/Apprentissage automatique pour la gestion des risques.pdf" target="_blank" rel="noreferrer">Ouvrir le PDF</a>
+              </article>
+            </div>
+
+            <div class="certification-slide">
+              <article class="certificate-card" data-category="leadership">
+                <div class="card-top">
+                  <span class="badge badge-lead">Leadership</span>
+                  <span class="date">2026</span>
+                </div>
+                <div class="pdf-preview"><span class="pdf-icon">PDF</span></div>
+                <h3>Leading Inclusively</h3>
+                <p>Leadercamp session replay</p>
+                <a href="certifications/Leading Inclusively Leadercamp_ Session Replay.pdf" target="_blank" rel="noreferrer">Ouvrir le PDF</a>
+              </article>
+
+              <article class="certificate-card" data-category="general">
+                <div class="card-top">
+                  <span class="badge badge-general">Basics</span>
+                  <span class="date">2026</span>
+                </div>
+                <div class="pdf-preview"><span class="pdf-icon">PDF</span></div>
+                <h3>What Is Programming</h3>
+                <p>Fundamentals overview</p>
+                <a href="certifications/What Is Programming.pdf" target="_blank" rel="noreferrer">Ouvrir le PDF</a>
+              </article>
+
+              <article class="certificate-card" data-category="javascript">
+                <div class="card-top">
+                  <span class="badge badge-js">JS</span>
+                  <span class="date">2026</span>
+                </div>
+                <div class="pdf-preview"><span class="pdf-icon">PDF</span></div>
+                <h3>JavaScript Front-end</h3>
+                <p>Data, decision making & arrays</p>
+                <a href="certifications/JavaScript Front-end Development_ Data, Decision Making, & Arrays.pdf" target="_blank" rel="noreferrer">Ouvrir le PDF</a>
+              </article>
+            </div>
+          </div>
+
+          <button class="certification-arrow next" type="button" aria-label="Certification suivante">›</button>
+        </div>
+      </section>
+
+      <section id="projets" class="card-section projects-section">
         <h2>Projets</h2>
-        <div class="cards-row">
-          <div class="card">
-            <h3>Rapport SIG</h3>
-            <p>Projet sur la signalisation et la sécurité routière avec des cartes.</p>
+
+        <div class="project-slider" aria-label="Slider de projets">
+          <button class="slider-btn prev" type="button" aria-label="Projet précédent">‹</button>
+
+          <div class="slides-container">
+            <article class="project-slide active">
+              <div class="project-content">
+                <span class="tag">SIG</span>
+                <h3>Rapport SIG</h3>
+                <p>Projet sur la signalisation et la sécurité routière avec des cartes et des analyses géographiques.</p>
+                <ul>
+                  <li>Cartographie routière</li>
+                  <li>Analyse spatial</li>
+                  <li>Visualisation claire</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="project-slide">
+              <div class="project-content">
+                <span class="tag">Web</span>
+                <h3>Exercices web</h3>
+                <p>Petits projets HTML/CSS et interactions pour apprendre la structure et le design d’un site moderne.</p>
+                <ul>
+                  <li>HTML / CSS</li>
+                  <li>Interface utilisateur</li>
+                  <li>Expérimentation</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="project-slide">
+              <div class="project-content">
+                <span class="tag">Design</span>
+                <h3>Essais créatifs</h3>
+                <p>Expérimentations visuelles et conceptuelles pour améliorer mon sens du design, de l’utilisation et de la structure.</p>
+                <ul>
+                  <li>Mockups</li>
+                  <li>Idées visuelles</li>
+                  <li>UI / UX</li>
+                </ul>
+              </div>
+            </article>
           </div>
-          <div class="card">
-            <h3>Exercices web</h3>
-            <p>Petits projets HTML/CSS pour apprendre le fonctionnement d'un site.</p>
-          </div>
-          <div class="card">
-            <h3>Essais</h3>
-            <p>Expérimentations et idées pour progresser en design.</p>
-          </div>
+
+          <button class="slider-btn next" type="button" aria-label="Projet suivant">›</button>
+        </div>
+
+        <div class="slider-dots" aria-label="Navigation du slider">
+          <button class="dot active" type="button" aria-label="Afficher le projet 1"></button>
+          <button class="dot" type="button" aria-label="Afficher le projet 2"></button>
+          <button class="dot" type="button" aria-label="Afficher le projet 3"></button>
         </div>
       </section>
 
@@ -182,12 +494,39 @@
             <img src="Images/linkedin-icon.svg" alt="LinkedIn">
           </a>
         </div>
+
+        <form id="contact-form" class="contact-form">
+          <div class="field-group">
+            <label for="name">Nom</label>
+            <input id="name" name="name" type="text" placeholder="Votre nom" required>
+          </div>
+
+          <div class="field-group">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="Votre email" required>
+          </div>
+
+          <div class="field-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Écrivez votre message" required></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">Envoyer</button>
+          <p id="form-status" class="form-status" aria-live="polite"></p>
+        </form>
       </section>
     </main>
 
     <footer>
-      <p>© 2026 Holandais — Site fait en HTML/CSS pendant mon apprentissage.</p>
+      <p>© <span id="year"></span> Holandais — Portfolio personnel.</p>
     </footer>
 
+    <a href="https://wa.me/242068125797" class="floating-whatsapp" target="_blank" rel="noreferrer" aria-label="Contactez-moi sur WhatsApp">
+      <img src="Images/whatsapp-icon.svg" alt="WhatsApp">
+    </a>
+
+    <button id="scroll-top-btn" class="scroll-top-btn" type="button" aria-label="Retour en haut">↑</button>
+
+    <script src="script.js"></script>
   </body>
 </html>
